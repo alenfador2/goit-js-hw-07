@@ -14,25 +14,5 @@ var lightbox = new SimpleLightbox('.gallery a', {
     captionsDelay: 250,
 });
 
-function handleClick(event) {
-    event.preventDefault();
-    lightbox.open();
-}
-gallery.addEventListener('click', handleClick);
-
-
-function closeLigthbox() {
-    const visibility = lightbox.visible();
-    if (visibility === true) {
-        lightbox.close();
-        }
-}
-    
-document.addEventListener('keyup', function (event) {
-    if (event.code === 'Escape') {
-        closeLigthbox();
-    }
-})
-console.log(lightbox.visible);
 
 

@@ -28,14 +28,15 @@ function handleClick(event) {
         openLightbox(source);
     }
 }
-
+gallery.addEventListener('click', handleClick);
+// Chodziło o to że ten listener musi być przy tej funkcii kturą wywoła? 
+// Czyli dla większej czytelności kody, tak ? Z góry dziękuję za odpowiedż:)
 function closeLigthbox() {
     const visibility = lightboxInstance.visible();
     if (visibility === true) {
         lightboxInstance.close();
         }
     }
-gallery.addEventListener('click', handleClick);
 
 document.addEventListener('keyup', function (event) {
     if (event.code === 'Escape') {
